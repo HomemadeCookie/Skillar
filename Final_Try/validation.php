@@ -24,9 +24,9 @@ if($num == 1){
 	/*TIL THIS ONE*/
 
 	$_SESSION['username'] = $name;
-	header('location:home_try.php');//HOME PAGE
+	header('location:home.php');//HOME PAGE
 }else{
-	header('location:start_try.php');
+	header('location:start.php');
 }
 
 
