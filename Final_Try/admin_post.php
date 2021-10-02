@@ -40,7 +40,7 @@
 	<h1 class="top">ADMIN</h1>
 	<div class="hey">
 		<h2>What do you wanna post, admin?</h2>
-		<form class="ff" action="adminpostvalidate_try.php" method="post">
+		<form class="ff" action="adminpostvalidate.php" method="post">
 			<label>Name</label>
 			<input type="text" name="one" class="form-control" value="<?php echo $_POST["Name"] ?>" required><br>
 			<label>Job Title</label>
@@ -64,7 +64,7 @@
 		</form>
 	</div>
 	<div class="back">
-		<a href="queries_try.php">Go to queries</a>
+		<a href="queries.php">Go to queries</a>
 	</div>
 </body>
 </html>
