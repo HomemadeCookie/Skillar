@@ -2,7 +2,7 @@
 
 session_start();
 if(!isset($_SESSION['username'])){
-	header('location:start_try.php');
+	header('location:start.php');
 }
 
 ?>
@@ -43,7 +43,7 @@ if(!isset($_SESSION['username'])){
 	}
 </style>
 <body>
-	<a class="darken" href="logout_try.php">LOGOUT</a>
+	<a class="darken" href="logout.php">LOGOUT</a>
 
 	<h1>Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
 	<h1> <?php echo $name ?> </h1>
@@ -53,13 +53,13 @@ if(!isset($_SESSION['username'])){
 
 		<?php
 			if(isset($_POST["sub1"])){
-				header("location:accountpage_try.php");
+				header("location:accountpage.php");
 			}
 		?>
 	</form>
 	<br>
 
-	<a class="darken" href="user_post_try.php">POST</a>
+	<a class="darken" href="user_post.php">POST</a>
 
 	<h1>ALL POSTS</h1>
 
