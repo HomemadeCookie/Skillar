@@ -36,6 +36,6 @@
 		echo $skills;
 		echo "</p><br><br><br>";
 	?>
-	<a href="home_try.php">Go Back</a>
+	<a href="home.php">Go Back</a>
 </body>
 </html>
