@@ -30,7 +30,7 @@
 
 	<div class="hey">
 		<h2>Login here</h2>
-		<form class="ff" action="validation_try.php" method="post">
+		<form class="ff" action="validation.php" method="post">
 			<label>Username</label>
 			<input type="text" name="user" class="form-control" required>
 			<label>Password</label>
@@ -39,7 +39,7 @@
 		</form>
 	</div>
 
-	<a href="signup_try.php">SIGN UP</a>
+	<a href="signup.php">SIGN UP</a>
 
 <!--
 	<div class="hey2">
