@@ -40,7 +40,7 @@
 	<h1 class="top">USER POST REQUEST</h1>
 	<div class="hey">
 		<h2>What do you wanna post</h2>
-		<form class="ff" action="userpostvalidate_try.php" method="post">
+		<form class="ff" action="userpostvalidate.php" method="post">
 			<label>Name</label>
 			<input type="text" name="one" class="form-control" value="<?php echo $_SESSION["name"] ?>" required><br>
 			<label>Job Title</label>
@@ -64,7 +64,7 @@
 		</form>
 	</div>
 	<div class="back">
-		<a href="home_try.php">Go to Home</a>
+		<a href="home.php">Go to Home</a>
 	</div>
 </body>
 </html>
