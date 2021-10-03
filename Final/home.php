@@ -70,7 +70,7 @@ if(!isset($_SESSION['username'])){
 	$con = mysqli_connect('localhost','root','');
 	mysqli_select_db($con, 'media');
 
-	$query = "SELECT * FROM final";
+	$query = "SELECT * FROM final WHERE Status=0";
 	$res = mysqli_query($con,$query);
 
 

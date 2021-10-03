@@ -15,6 +15,7 @@ $five= $_POST['five'];
 $six = $_POST['six'];
 $seven= $_POST['seven'];
 $eight = $_POST['eight'];
+$nine = $_POST['nine'];
 
 $likes=0;
 $num=1;
@@ -36,7 +37,7 @@ while($num!=0){
 $reg = "insert into uploads(Name, Job_title, Job_description, Income, Payment_method, Contact_num, Social_media, Date, Likes, ID) values('a','a','a','a','a','a','a','11-11-2000','0','0')";
 */
 
-$reg = "INSERT INTO `uploads` (`Name`, `Job_title`, `Job_description`, `Income`, `Payment_method`, `Contact_num`, `Social_media`, `Date`, `Likes`, `ID`) VALUES ('$one', '$two', '$three', '$four', '$five', '$six', '$seven', '$eight', '$likes', '$id')";
+$reg = "INSERT INTO `uploads` (`Name`, `Username`, `Job_title`, `Job_description`, `Income`, `Payment_method`, `Contact_num`, `Social_media`, `Date`, `Likes`, `ID`) VALUES ('$one', '$two', '$three', '$four', '$five', '$six', '$seven', '$eight', '$nine', '$likes', '$id')";
 
  mysqli_query($con,$reg);
  //echo "Upload Successful";
