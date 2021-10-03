@@ -61,7 +61,8 @@ if(!isset($_SESSION['username'])){
 
 	<a class="darken" href="user_post.php">POST</a>
 
-	<h1>ALL POSTS</h1>
+	<!--TRY KO LANG BAGUHIN, GITHUB TEST-->
+	<h1>ALL POSTS:</h1>
 
 	<?php
 
