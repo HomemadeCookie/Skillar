@@ -23,7 +23,7 @@
 		}
 		.container{
 			display: grid;
-			grid-template-columns: 1fr 9fr;
+			grid-template-columns: 10% 110%;
 		}
 		.skillar{
 			text-align: center;
