@@ -9,10 +9,44 @@
 		a{
 			font-size:30px;
 		}
+		body{
+			background-color:#1FB25F;
+			margin: 0;
+		}
+		hr{
+			background-color: black;
+			height: 3px;
+		}
+		span{
+			color: black;
+			margin-right: 10px;
+		}
+		.container{
+			display: grid;
+			grid-template-columns: 1fr 9fr;
+		}
+		.skillar{
+			text-align: center;
+			color: white;
+			background-color: black;
+		}
+		.admin{
+			text-align: center;
+			color: #800000;
+			background-color: #A9EED1;
+		}
 	</style>
 </head>
 <body>
-<h1>ADMIN</h1>
+<div class="container">
+	<div class="skillar">	
+		<h1>SKILLAR</h1> 
+	</div>
+	<div class="admin">
+		<h1>Admin Queries</h1>
+	</div>
+</div>	
+<br>
 <?php
 
 
