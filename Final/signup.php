@@ -34,7 +34,9 @@
 			<label>Password</label>
 			<input type="password" name="password" class="form-control" required>
 			<label>Skills. What are your skills? separate by comma (ex. digital design, poetry)</label>
-			<input type="type" name="skills" class="form-control" required><br>
+			<input type="text" name="skills" class="form-control" required><br>
+			<label>Bio</label>
+			<input type="text" name="bio" class="form-control" required>
 
 			<button type="submit">Sign up</button>
 		</form>
