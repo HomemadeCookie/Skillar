@@ -209,11 +209,11 @@ if(!isset($_SESSION['username'])){
 				
 			</div>
 			<div class="prof_pic_holder">
-				<h1 style="text-align: center;">Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
+				<h1 style="text-align: center; font-size: 4vh;">Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
 				<form class="ff"  method="post">
 			<div class="accpage">
 					<div>
-					<i class="fas fa-user" style="text-align: center; font-size: 70px;color: white"></i>
+					<i class="fas fa-user" style="text-align: center; font-size: 8vh;color: white"></i>
 					</div>
 					<div>
 					<input type="submit" value="Profile" name="sub1">
