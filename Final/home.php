@@ -24,8 +24,13 @@ if(!isset($_SESSION['username'])){
 <html>
 <head>
 	<title>Home page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
-
 </head>
 <style>
 	body{
@@ -34,6 +39,7 @@ if(!isset($_SESSION['username'])){
 	}
 	h1{
 		color:white;
+		font-family: 'Roboto', sans-serif;
 	}
 	.darken{
 		color:white;
@@ -41,7 +47,7 @@ if(!isset($_SESSION['username'])){
 		font-style:bold;
 	}
 	p{
-		font-family:century gothic;
+		font-family: 'Roboto', sans-serif;
 		color:white;
 	}
 	.container{
@@ -89,6 +95,7 @@ if(!isset($_SESSION['username'])){
 	#logo{
 			font-size: 50px;
 			text-align: center;
+			font-family: 'ubuntu', sans serif;
 		}
 
 	.three{
@@ -113,6 +120,7 @@ if(!isset($_SESSION['username'])){
 			margin-top: -5px;
 			font-size: 35px;
 			text-align: center;
+			font-family: 'Roboto', sans-serif;
 		}
 		.extra_space{
 			background-color: #8FDDDF;
@@ -137,8 +145,11 @@ if(!isset($_SESSION['username'])){
 		}
 		.accpage{
 			display: grid;
-			grid-template-rows: 8fr 2fr;
+			grid-template-rows: 7fr 3fr;
 			text-align: center;
+		}
+		h3{
+			font-family: 'Bebas Neue', cursive;
 		}
 
 	.four{
@@ -164,13 +175,12 @@ if(!isset($_SESSION['username'])){
 		padding: 5px;
 	}
 	.article-box >p{
-		font-family: calibri;	
+			
 		font-size: 15px;
 	}
 	.article-box >h3{
 		color: #820000;
-		font-family: century gothic;
-		font-size: 20px;
+		font-size: 30px;
 	}
 	.uname{
 		color: yellow;
@@ -209,11 +219,11 @@ if(!isset($_SESSION['username'])){
 				
 			</div>
 			<div class="prof_pic_holder">
-				<h1 style="text-align: center;">Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
+				<h1 style="text-align: center; font-size: 4vh; font-family: 'Roboto', sans-serif;">Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
 				<form class="ff"  method="post">
 			<div class="accpage">
 					<div>
-					<i class="fas fa-user" style="text-align: center; font-size: 70px;color: white"></i>
+					<i class="fas fa-user" style="text-align: center; font-size:5vh;color: white"></i>
 					</div>
 					<div>
 					<input type="submit" value="Profile" name="sub1">
@@ -240,7 +250,7 @@ if(!isset($_SESSION['username'])){
 		</div>
 		<div class="four">
 			<div style="text-align: center;" class="postdiv">
-			<h1 style="color: black;"><i class="fas fa-globe" style="margin-right: 2px; "></i>Public Feed</h1>
+			<h1 style="color: black; font-family: 'ubuntu', sans serif;"><i class="fas fa-globe" style="margin-right: 2px; "></i>Public Feed</h1>
 			</div>
 			<div class="allpost">
 				<div class="postitem">
@@ -249,17 +259,12 @@ if(!isset($_SESSION['username'])){
 	/*
 	$con = mysqli_connect('localhost','root','');
 	mysqli_select_db($con, 'media');
-
 	$query = "SELECT * FROM final WHERE Status=0";
 	$res = mysqli_query($con,$query);
-
-
 	while($row = mysqli_fetch_array($res)){
 		echo "<p>" . $row['Name'] . "</p><p>" . $row['JTitle'] . "</p><p>" . $row['JDescription'] . "</p><p>" . $row['Income'] . "</p><p>" . $row['PMethod'] . "</p><p>" . $row['CNumber'] . "</p><p>" . $row['SMedia'] . "</p><p>" . $row['Likes'] . "</p><p>" . $row['Date'] . "</p>";
-
 		echo "<br>";
 	}
-
 	//mysqli_close();
 	*/
 	$conn = mysqli_connect("localhost", "root", "", "media");
