@@ -137,7 +137,7 @@ if(!isset($_SESSION['username'])){
 		}
 		.accpage{
 			display: grid;
-			grid-template-rows: 8fr 2fr;
+			grid-template-rows: 7fr 3fr;
 			text-align: center;
 		}
 
@@ -213,7 +213,7 @@ if(!isset($_SESSION['username'])){
 				<form class="ff"  method="post">
 			<div class="accpage">
 					<div>
-					<i class="fas fa-user" style="text-align: center; font-size: 8vh;color: white"></i>
+					<i class="fas fa-user" style="text-align: center; font-size:5vh;color: white"></i>
 					</div>
 					<div>
 					<input type="submit" value="Profile" name="sub1">
