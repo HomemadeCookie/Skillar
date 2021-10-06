@@ -25,12 +25,6 @@ if(!isset($_SESSION['username'])){
 <head>
 	<title>Home page</title>
 	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 <style>
 	body{
