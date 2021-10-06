@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
 	<title>ADMIN POST</title>
 	<style>
 		.top{
@@ -13,12 +14,21 @@
 			width:40%;
 			margin-left:5%;
 			margin-top:20px;
+			background-color: #1FB25F;
+			padding: 15px; 
+			border-radius: 10px;
 		}
 		h2{
 			color:black;
 		}
 		label{
 			color:black;
+		}
+		body{
+			background-color: #3CD184;
+		}
+		h1{
+			color: #800000;
 		}
 	</style>
 </head>
@@ -29,8 +39,8 @@
 	mysqli_select_db($con, 'media');
 
 	?>
-	<br><br>
-	<h1 class="top">ADMIN</h1>
+	<br>
+	<h1 class="top">ADMIN POST</h1>
 	<div class="hey">
 		<h2>What do you wanna post, admin?</h2>
 		<form class="ff" action="adminpostvalidate.php" method="post">
@@ -59,7 +69,7 @@
 		</form>
 	</div>
 	<div>
-		<a href="queries.php">Go to queries</a>
+		<a href="queries.php"><button style="font-size: 30px;"><i class="fas fa-arrow-left"></i></button></a>
 	</div>
 </body>
 </html>
