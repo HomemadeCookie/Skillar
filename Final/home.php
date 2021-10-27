@@ -235,6 +235,10 @@ if(!isset($_SESSION['username'])){
 				<!--POST BUTTON-->
 				<a class="darken" href="user_post.php"><button><i class="fas fa-pen" style="font-size: 30px;"></i></button></a>
 
+				<br><br>
+				<!--INSTRUCIONS-->
+				<a href="instructions.php">How to use</a>
+
 			</div>
 		</div>
 		<div class="four">

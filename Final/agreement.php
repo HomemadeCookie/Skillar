@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
 
-	<title>Account Page</title>
+	<title>Terms of Service</title>
 	<style>
 		p{
 			font-size:20px;
@@ -84,23 +84,12 @@
 
 </head>
 <body>
-	<h1>Instructions page</h1>
-	<h2>How to use the website</h2>
+	<h1>Terms of service</h1>
+	<h2>By creating an account, you agree to the following:</h2>
 	<p>
-		Scroll through feed to see available projects<br>
-		If you see an available project that match your skills, contact the author using the handle/username provided in the post<br>
-		To filter posts based on your preference, simply type a category or date you are interested in in the search bar<br>
-
-		<br><br>
-		To make a post, simply click the icon at the lower left of the screen<br>
-		Put all the necessary details (make sure it is complete and true, incomplete details will not be accepted)<br>
-		All posts considered as academic dishonesty will not be tolerated, any caught students not abiding by the PSHS Code of Conduct will be held liable for sanctions/offense<br>
-		After all the details are filled, simply click post and wait until admin approves of it<br>
-		Once it is approved, the post can now be seen in the public feed<br>
-		You can also see all your posts in your account page<br>
-		If one of your posts are already done/taken, you can remove it from the public feed by simply clicking the checkbox in the post at your account page.
+		Skillar is only responsible for the facilitation of the information regarding the price of the project and the platform to which you can communicate to the author regarding further issues about the payment. Skillar will not be held liable for any financial disputes/loss that come as a result of a project you pursue as all communications and transactions are held outside our platform<br>
+		Author of posts that violate the PSHS code of conduct will be held liable for respective offenses/sanctions. <br>
 	</p>
-
-	<a href="home.php">Go back</a>
+	<a href="signup.php">Go back</a>
 </body>
 </html>
