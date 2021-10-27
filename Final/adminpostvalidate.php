@@ -49,6 +49,7 @@ $del = "DELETE FROM uploads WHERE Job_Title='$three' AND Job_description='$four'
 <html>
 <head>
 	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 	<style>
 		h1{
 			font-family: Calibri;
@@ -73,11 +74,13 @@ $del = "DELETE FROM uploads WHERE Job_Title='$three' AND Job_description='$four'
 	</style>
 </head>
 <body>
-	<div class="content">
-	<h1>Post Successful</h1>
-	<h2>Selected post will now appear on public feed.</h2>
-	<br><br><br>
-	<a href="queries.php"><button><i class="fas fa-arrow-left" style="font-size: 20px;"></i></button></a>
+	<div class="container-fluid">
+		<div class="content">
+			<h1>Post Successful</h1>
+			<h2>Selected post will now appear on public feed.</h2>
+			<br><br><br>
+			<a href="queries.php"><button><i class="fas fa-arrow-left" style="font-size: 20px;"></i></button></a>
+		</div>
 	</div>
 </body>
 </html>

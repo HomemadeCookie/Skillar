@@ -45,6 +45,7 @@ $reg = "INSERT INTO `uploads` (`Name`, `Username`, `Job_title`, `Job_description
 ?>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
 	<style>
 		h1{
@@ -67,11 +68,13 @@ $reg = "INSERT INTO `uploads` (`Name`, `Username`, `Job_title`, `Job_description
 	</style>
 </head>
 <body>
-	<div class="content">
-	<h1>Post Request Sent Successfully</h1>
-	<h2>Processing will take somewhere around 1-3 days.</h2>
-	<br><br><br>
-	<a href="user_post.php"><button><i class="fas fa-arrow-left" style="font-size: 20px;"></i></button></a>
+	<div class="container-fluid">
+		<div class="content">
+			<h1>Post Request Sent Successfully</h1>
+			<h2>Processing will take somewhere around 1-3 days.</h2>
+			<br><br><br>
+			<a href="user_post.php"><button><i class="fas fa-arrow-left" style="font-size: 20px;"></i></button></a>
+		</div>
 	</div>
 </body>
 </html>
