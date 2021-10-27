@@ -23,12 +23,20 @@
 			font-size:20px;
 		}
 		body{
-			background-color:#F4F9F9;
-
+			background-color:#F4F9F9;	
 		}
-
+		.button{
+			border-radius: 15px;
+			font-family: 'Bebas Neue', cursive;
+			font-size: 15px;
+			padding: 0;
+			width: 7%;
+		}
 		.banner{
 				background-color: #F4F9F9;
+				padding-top: 2%;
+				padding-bottom: 3%;	
+				
 		}
 		.active{
 			background-color: #a9f1df;
@@ -48,6 +56,9 @@
 			margin-top: 7%;
 			width: 95%;
 			border-radius: 5px;
+			padding-top: 1%;
+			padding-bottom: 1%;
+			padding-left: 2%;
 		}
 		i{
 			font-size: 300%;
@@ -70,7 +81,7 @@
 <div class="back col-xs-1">
 	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
 </div>
-<div class="col-xs-11 center-block text-center">
+<div class="col-xs-11 center-block text-center banner">
 	<h1>ACCOUNT PAGE</h1>
 </div>
 </div>
@@ -122,7 +133,7 @@
 					echo "<input type='checkbox' name='status' value='yes' checked>";
 				}
 				echo "<input type='hidden' name='id' value='".$ID."'>
-				<input type='submit' name='submit' value='submit'></form></div>";
+				<input type='submit' name='submit' value='submit' class='button'></form></div>";
 			}
 		}
 
