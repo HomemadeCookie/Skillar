@@ -2,6 +2,7 @@
 <html>
 <head>
 	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 	<title>ADMIN POST</title>
 	<style>
 		.top{
@@ -10,7 +11,7 @@
 			margin-left:10px;
 		}
 		.hey{
-			height:400px;
+			height:88vh;
 			width:40%;
 			margin-left:5%;
 			margin-top:20px;
@@ -40,7 +41,15 @@
 
 	?>
 	<br>
-	<h1 class="top">ADMIN POST</h1>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-1">
+				<a href="queries.php"><button style="font-size: 30px;"><i class="fas fa-arrow-left"></i></button></a>
+			</div>
+			<div class="col-xs-11">
+				<h1 class="top">ADMIN POST</h1>
+			</div>
+		</div>
 	<div class="hey">
 		<h2>What do you wanna post, admin?</h2>
 		<form class="ff" action="adminpostvalidate.php" method="post">
@@ -68,8 +77,9 @@
 			<button type="submit">Post</button>
 		</form>
 	</div>
-	<div>
-		<a href="queries.php"><button style="font-size: 30px;"><i class="fas fa-arrow-left"></i></button></a>
+
+		
+	
 	</div>
 </body>
 </html>
