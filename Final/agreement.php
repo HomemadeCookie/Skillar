@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
 
-	<title>Account Page</title>
+	<title>Terms of Service</title>
 	<style>
 		p{
 			font-size:20px;
@@ -84,54 +84,12 @@
 
 </head>
 <body>
-
-	<div class="row">
-<div class="back col-xs-1">
-	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
-</div>
-<div class="col-xs-11 center-block text-center banner">
-	<h1>ACCOUNT PAGE</h1>
-</div>
-</div>
-<div class="row content center-block active">
-	<div class="col-xs-2 text-center active">
-	<h2>Info</h2>
-</div>
-<div class="col-xs-10 inactive">
-	<a href="accountpage_posts.php"><h2>Posts</h2></a>
-</div>
-
-<div class="userdata center-block">	
-	<?php
-		$con = mysqli_connect('localhost','root','');
-		mysqli_select_db($con, 'users');
-
-		echo "<h4>Username: </h4><p>";
-		echo $_SESSION['username'];
-		echo "</p>";
-
-		$hey=$_SESSION['username'];
-		$query = "SELECT * FROM userdata WHERE Username = '$hey'";
-		$res = mysqli_query($con,$query);
-		$row = mysqli_fetch_array($res);
-
-		$name=$row['Full_name'];
-		$skills=$row['Skills'];
-		$bio=$row['Bio'];
-
-		echo "<br><h4>Full Name: </h4><p>";
-		echo $name;
-		echo "</p><br><form action='update_account.php' method='POST'><h4>Skills: </h4><input type='text' value='".$skills."' name='skills'>";
-		echo "</p><br><h4>Bio</h4><input type='text' value='".$bio."' name='bio'><br><br>";
-		echo "<input type='submit' value='update' name='submit' class='button'>";
-		echo "</form><br><br><br>";
-	?>
-		
-	</div>
-
-	<br>
-
-</div>
-	
+	<h1>Terms of service</h1>
+	<h2>By creating an account, you agree to the following:</h2>
+	<p>
+		Skillar is only responsible for the facilitation of the information regarding the price of the project and the platform to which you can communicate to the author regarding further issues about the payment. Skillar will not be held liable for any financial disputes/loss that come as a result of a project you pursue as all communications and transactions are held outside our platform<br>
+		Author of posts that violate the PSHS code of conduct will be held liable for respective offenses/sanctions. <br>
+	</p>
+	<a href="signup.php">Go back</a>
 </body>
 </html>

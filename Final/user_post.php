@@ -6,7 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
 	<!-- KUNG IPAPASS KO ANG NAME AND ID, PWEDENG IPOST KO PAPUNTA DITO, ILAGAY SA ISANG INPUT FIELD NA HIDDEN TAPOS ISEND YUN SA USERPOSTVALIDATE -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 	<title>REQUEST POST</title>
 	<style>
 		.top{
@@ -15,14 +17,16 @@
 			margin-left:10px;
 		}
 		.hey{
-			height:400px;
+			height:88vh;
 			width:40%;
 			margin-left:5%;
 			margin-top:20px;
+			background-color: #1FB25F;
+			padding: 10px; 
+			border-radius: 10px;
 		}
 		.back{
 			margin-left:5%;
-
 		}
 		h2{
 			color:black;
@@ -30,13 +34,27 @@
 		label{
 			color:black;
 		}
+		body{
+			background-color: #3CD184;
+		}
+		h1{
+			color: #800000;
+		}
 	</style>
 </head>
 <body>
-	<br><br>
-	<h1 class="top">USER POST REQUEST</h1>
+	<br>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-1">
+			<a href="home.php"><button><i class="fas fa-home" style="font-size: 30px;"></i></button></a>
+		</div>
+		<div class="col-xs-11">
+			<h1 class="top">USER POST REQUEST</h1>
+		</div>
+	</div>
 	<div class="hey">
-		<h2>What do you wanna post</h2>
+		<h2>What do you want to post?</h2>
 		<form class="ff" action="userpostvalidate.php" method="post">
 			<label>Name</label>
 			<input type="text" name="one" class="form-control" value="<?php echo $_SESSION["name"] ?>" required><br>
@@ -61,9 +79,6 @@
 
 			<button type="submit">Post</button>
 		</form>
-	</div>
-	<div>
-		<a href="home.php">Go to Home</a>
 	</div>
 </body>
 </html>

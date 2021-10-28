@@ -84,54 +84,23 @@
 
 </head>
 <body>
+	<h1>Instructions page</h1>
+	<h2>How to use the website</h2>
+	<p>
+		Scroll through feed to see available projects<br>
+		If you see an available project that match your skills, contact the author using the handle/username provided in the post<br>
+		To filter posts based on your preference, simply type a category or date you are interested in in the search bar<br>
 
-	<div class="row">
-<div class="back col-xs-1">
-	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
-</div>
-<div class="col-xs-11 center-block text-center banner">
-	<h1>ACCOUNT PAGE</h1>
-</div>
-</div>
-<div class="row content center-block active">
-	<div class="col-xs-2 text-center active">
-	<h2>Info</h2>
-</div>
-<div class="col-xs-10 inactive">
-	<a href="accountpage_posts.php"><h2>Posts</h2></a>
-</div>
+		<br><br>
+		To make a post, simply click the icon at the lower left of the screen<br>
+		Put all the necessary details (make sure it is complete and true, incomplete details will not be accepted)<br>
+		All posts considered as academic dishonesty will not be tolerated, any caught students not abiding by the PSHS Code of Conduct will be held liable for sanctions/offense<br>
+		After all the details are filled, simply click post and wait until admin approves of it<br>
+		Once it is approved, the post can now be seen in the public feed<br>
+		You can also see all your posts in your account page<br>
+		If one of your posts are already done/taken, you can remove it from the public feed by simply clicking the checkbox in the post at your account page.
+	</p>
 
-<div class="userdata center-block">	
-	<?php
-		$con = mysqli_connect('localhost','root','');
-		mysqli_select_db($con, 'users');
-
-		echo "<h4>Username: </h4><p>";
-		echo $_SESSION['username'];
-		echo "</p>";
-
-		$hey=$_SESSION['username'];
-		$query = "SELECT * FROM userdata WHERE Username = '$hey'";
-		$res = mysqli_query($con,$query);
-		$row = mysqli_fetch_array($res);
-
-		$name=$row['Full_name'];
-		$skills=$row['Skills'];
-		$bio=$row['Bio'];
-
-		echo "<br><h4>Full Name: </h4><p>";
-		echo $name;
-		echo "</p><br><form action='update_account.php' method='POST'><h4>Skills: </h4><input type='text' value='".$skills."' name='skills'>";
-		echo "</p><br><h4>Bio</h4><input type='text' value='".$bio."' name='bio'><br><br>";
-		echo "<input type='submit' value='update' name='submit' class='button'>";
-		echo "</form><br><br><br>";
-	?>
-		
-	</div>
-
-	<br>
-
-</div>
-	
+	<a href="home.php">Go back</a>
 </body>
 </html>
