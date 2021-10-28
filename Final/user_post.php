@@ -17,16 +17,22 @@
 			margin-left:10px;
 		}
 		.hey{
-			height:88vh;
 			width:40%;
-			margin-left:5%;
+			
 			margin-top:20px;
-			background-color: #1FB25F;
+			background-color: #a9f1df;
 			padding: 10px; 
 			border-radius: 10px;
 		}
 		.back{
 			margin-left:5%;
+		}
+		.header{
+			width: 40%;
+			background-color: #ffeebf;
+			padding-top: 1%;
+			padding-bottom: 1%;
+			border-radius: 5px;
 		}
 		h2{
 			color:black;
@@ -35,7 +41,7 @@
 			color:black;
 		}
 		body{
-			background-color: #3CD184;
+			background-color:#d1fff4;
 		}
 		h1{
 			color: #800000;
@@ -45,7 +51,7 @@
 <body>
 	<br>
 	<div class="container-fluid">
-	<div class="row">
+	<div class="row header text-center center-block">
 		<div class="col-xs-1">
 			<a href="home.php"><button><i class="fas fa-home" style="font-size: 30px;"></i></button></a>
 		</div>
@@ -53,7 +59,7 @@
 			<h1 class="top">USER POST REQUEST</h1>
 		</div>
 	</div>
-	<div class="hey">
+	<div class="hey center-block">
 		<h2>What do you want to post?</h2>
 		<form class="ff" action="userpostvalidate.php" method="post">
 			<label>Name</label>
@@ -77,7 +83,7 @@
 			<!--ADD ALSO NUMBER OF LIKES, ID NUMBER-->
 
 
-			<button type="submit">Post</button>
+			<button type="submit" class="btn btn-primary btn-rounded center-block">Post</button>
 		</form>
 	</div>
 </body>

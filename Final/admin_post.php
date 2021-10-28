@@ -11,13 +11,19 @@
 			margin-left:10px;
 		}
 		.hey{
-			height:88vh;
+			
 			width:40%;
-			margin-left:5%;
 			margin-top:20px;
-			background-color: #1FB25F;
+			background-color: #a9f1df;
 			padding: 15px; 
-			border-radius: 10px;
+			border-radius: 5px;
+		}
+		.header{
+			width: 40%;
+			background-color: #ffeebf;
+			padding-top: 1%;
+			padding-bottom: 1%;
+			border-radius: 5px;
 		}
 		h2{
 			color:black;
@@ -26,11 +32,12 @@
 			color:black;
 		}
 		body{
-			background-color: #3CD184;
+			background-color:#d1fff4;
 		}
 		h1{
 			color: #800000;
 		}
+
 	</style>
 </head>
 <body>
@@ -42,7 +49,7 @@
 	?>
 	<br>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row header center-block text-center">
 			<div class="col-xs-1">
 				<a href="queries.php"><button style="font-size: 30px;"><i class="fas fa-arrow-left"></i></button></a>
 			</div>
@@ -50,7 +57,7 @@
 				<h1 class="top">ADMIN POST</h1>
 			</div>
 		</div>
-	<div class="hey">
+	<div class="hey center-block">
 		<h2>What do you wanna post, admin?</h2>
 		<form class="ff" action="adminpostvalidate.php" method="post">
 			<label>Name</label>
@@ -74,7 +81,7 @@
 			<!--ADD ALSO NUMBER OF LIKES, ID NUMBER-->
 
 
-			<button type="submit">Post</button>
+			<button type="submit" class="btn btn-primary btn-rounded center-block">Post</button>
 		</form>
 	</div>
 

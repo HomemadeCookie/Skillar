@@ -10,7 +10,7 @@
 			font-size:30px;
 		}
 		body{
-			background-color:#1FB25F;
+			background-color:#d1fff4;
 			margin: 0;
 		}
 		hr{

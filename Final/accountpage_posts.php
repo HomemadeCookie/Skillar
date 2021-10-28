@@ -20,10 +20,15 @@
 	<title>Account Page</title>
 	<style>
 		p{
-			font-size:20px;
+			font-weight: bold;
+			font-size: 150%;
 		}
 		body{
 			background-color:#F4F9F9;	
+		}
+		.back{
+			margin-top: 3%;
+			text-align: center;
 		}
 		.button{
 			border-radius: 15px;
@@ -33,27 +38,32 @@
 			width: 7%;
 		}
 		.banner{
-				background-color: #F4F9F9;
 				padding-top: 2%;
-				padding-bottom: 3%;	
-				
+				padding-bottom: 3%;
+				text-align: center;
 		}
 		.active{
 			background-color: #a9f1df;
-			border-radius: 10px;
-
+			padding-top: 0.5%;
+			padding-bottom: 1%;
+			
 		}
 		.content{
 			width: 90%;
+			background-color: #a9f1df;
 			border-radius: 10px;
 			
 		}
 		.inactive{
-			background-color: #F4F9F9;
+			
+			text-align: center;
+			padding-top: 0.5%;
+			padding-bottom: 1%;
 		}
 		.userdata{
-			border:5px solid #F4F9F9;
-			margin-top: 7%;
+			
+			background-color:#d1fff4;
+			margin-top: 2%;
 			width: 95%;
 			border-radius: 5px;
 			padding-top: 1%;
@@ -63,21 +73,43 @@
 		i{
 			font-size: 300%;
 			margin-top: 10%;
-					}
-					h1{
+		}
+		h1{
 			font-family: 'Ubuntu', sans-serif;
 		}
 		h2{
 			font-family: 'Bebas Neue', cursive;
+			font-weight: bolder;
+			font-size: 250%;
 		}
 		p{
 			font-family: 'Roboto', sans-serif;
+		}
+		.header{
+			margin-top: 1%;
+			border-radius: 5px;
+			width: 90%;
+			background-color: #ffeebf;
+		}
+		h3{
+			font-weight: bolder;
+			font-size: 200%;
+		}
+		h1{
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 280%;
+			font-weight: bold;
+		}
+		.navbar{
+			background-color: #ffeebf;
+			border: 2px solid #F4F9F9;
 		}
 	</style>
 
 </head>
 <body>
-	<div class="row">
+	<div class="row header center-block">
+		
 <div class="back col-xs-1">
 	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
 </div>
@@ -85,16 +117,20 @@
 	<h1>ACCOUNT PAGE</h1>
 </div>
 </div>
-<div class="row content center-block active">
+
+<br>
+<div class="row content center-block ">
+	<div class="navbar">
 	<div class="col-xs-2 inactive">
 	<a href="accountpage.php"><h2>Info</h2></a>
 </div>
-<div class="col-xs-10 active">
+<div class="col-xs-1 active text-center">
+	<h2>|</h2>
+</div>
+<div class="col-xs-2 active">
 	<h2>Posts</h2>
 </div>
-	
-	
-
+</div>
 	<?php
 		$servername = "localhost";
 		$username = "root";
@@ -140,9 +176,9 @@
 	?>
 
 
-	<br><br><br>
-
+	<br><br>
 </div>
+
 	<a href="home.php">Go Back</a>
 </body>
 </html>
