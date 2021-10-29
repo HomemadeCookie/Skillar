@@ -178,7 +178,5 @@
 
 	<br><br>
 </div>
-
-	<a href="home.php">Go Back</a>
 </body>
 </html>

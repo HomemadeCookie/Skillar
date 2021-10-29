@@ -27,6 +27,13 @@ if(!isset($_SESSION['username'])){
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 	<title>REQUEST POST</title>
 	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <style>
 	.logo{
@@ -110,7 +117,7 @@ if(!isset($_SESSION['username'])){
 		<div class="row">
 			<div class="col-xs-2 logo">
 				<br>
-				<h1 style="color: white; text-align: center;">Skillar</h1>
+				<h1 style="color: white; text-align: center; font-family: 'Ubuntu', sans-serif;">Skillar</h1>
 
 			</div>
 			<div class="col-xs-10 search">
@@ -232,7 +239,7 @@ if(!isset($_SESSION['username'])){
 					<p>@".$row["Username"]."</p>
 					<div class='row'>
 					<div class='col-xs-5'>
-					<p><b style='color:#800000'>Job Title:</b> ".$row["JTitle"]."</p>
+					<p><b style='color:#800000;'>Job Title:</b> ".$row["JTitle"]."</p>
 					</div>
 					<div class='col-xs-5'>
 					<p><b style='color:#800000'>Income:</b> ".$row["Income"]."(".$row["PMethod"].")</p>
