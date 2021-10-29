@@ -34,7 +34,7 @@ if(!isset($_SESSION['username'])){
 		height: 15vh;
 	}
 	.search{
-		background-color: #A9EED1;
+		background-color: #ffeebf;
 		height: 15vh;
 	}
 	.search_bar{
@@ -47,11 +47,11 @@ if(!isset($_SESSION['username'])){
 		margin-left: 7vw;
 	}
 	.logout_holder{
-			background-color: #A9EED1;
+			background-color: #ffeebf;
 			margin-left: 6vw;
 	}
 	.instruction_holder{
-			background-color: #A9EED1;
+			background-color: #ffeebf;
 	}
 	.logout{
 			margin:30px;
@@ -87,7 +87,7 @@ if(!isset($_SESSION['username'])){
 		text-align: center;
 	}
 	.post{
-		background-color: #3CD184;
+		background-color: #d1fff4;
 		height: 85vh;
 		overflow-y: auto;
 	}
@@ -99,9 +99,7 @@ if(!isset($_SESSION['username'])){
 		padding: 5%;
 	}
 	.article-box{
-		background-color: #1FB25F;
-		border-style: solid;
-		border-color:#3CD184; 
+		background-color: #a9f1df;
 		margin-bottom: 5%;
 		padding: 3%;
 	}
@@ -137,7 +135,7 @@ if(!isset($_SESSION['username'])){
 		</div>
 		<div class="row">
 			<div class="col-xs-2 account">
-				<h1 style="text-align: center; font-size: 3vh;">Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
+				<h1 class="username"> <?php echo $name ?> </h1>
 				<div class="user_holder">
 					<i class="fas fa-user" style="text-align: center;color: white"></i>
 				</div>
@@ -151,7 +149,7 @@ if(!isset($_SESSION['username'])){
 						?>
 				</div>
 				</form>		
-				<h1 class="username"> <?php echo $name ?> </h1>
+				<h1 style="text-align: center; font-size: 2vh;"><?php echo "@" . $_SESSION['username']; ?></h1>
 				<!--POST BUTTON-->
 				<div class="userpost">
 				<a class="darken" href="user_post.php"><button><i class="fas fa-pen" style="font-size: 30px;"></i></button></a>
@@ -191,21 +189,21 @@ if(!isset($_SESSION['username'])){
 			if($queryResult > 0){
 				while($row = mysqli_fetch_assoc($res)){
 					echo "<div class='article-box'>
-					<h3>".$row["Name"]."</h3>
+					<h3><b>".$row["Name"]."</b></h3>
 					<p>@".$row["Username"]."</p>
 					<div class='row'>
 					<div class='col-xs-5'>
-					<p><b>Job Title:</b> ".$row["JTitle"]."</p>
+					<p><b style='color:#800000'>Job Title:</b> ".$row["JTitle"]."</p>
 					</div>
 					<div class='col-xs-5'>
-					<p><b>Income:</b> ".$row["Income"]."(".$row["PMethod"].")</p>
+					<p><b style='color:#800000'>Income:</b> ".$row["Income"]."(".$row["PMethod"].")</p>
 					</div>
 					</div>
 					<br>
-					<p><b>Description: </b> ".$row["JDescription"]."</p>
+					<p><b style='color:#800000'>Description: </b> ".$row["JDescription"]."</p>
 					
 					<br>
-					<p><b>Contact me at:</b></p>
+					<p><b style='color:#800000'>Contact me at:</b></p>
 					<div class='row'>
 					<div class='col-xs-5'>
 					<p>".$row["CNumber"]."</p>
@@ -230,21 +228,21 @@ if(!isset($_SESSION['username'])){
 			if($queryResults > 0){
 				while ($row = mysqli_fetch_assoc($res)) {
 					echo "<div class='article-box'>
-					<h3>".$row["Name"]."</h3>
+					<h3><b>".$row["Name"]."</b></h3>
 					<p>@".$row["Username"]."</p>
 					<div class='row'>
 					<div class='col-xs-5'>
-					<p><b>Job Title:</b> ".$row["JTitle"]."</p>
+					<p><b style='color:#800000'>Job Title:</b> ".$row["JTitle"]."</p>
 					</div>
 					<div class='col-xs-5'>
-					<p><b>Income:</b> ".$row["Income"]."(".$row["PMethod"].")</p>
+					<p><b style='color:#800000'>Income:</b> ".$row["Income"]."(".$row["PMethod"].")</p>
 					</div>
 					</div>
 					<br>
-					<p><b>Description: </b> ".$row["JDescription"]."</p>
+					<p><b style='color:#800000'>Description: </b> ".$row["JDescription"]."</p>
 					
 					<br>
-					<p><b>Contact me at:</b></p>
+					<p><b style='color:#800000'>Contact me at:</b></p>
 					<div class='row'>
 					<div class='col-xs-5'>
 					<p>".$row["CNumber"]."</p>
