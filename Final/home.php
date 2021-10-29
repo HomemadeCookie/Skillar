@@ -24,230 +24,146 @@ if(!isset($_SESSION['username'])){
 <html>
 <head>
 	<title>Home page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<title>REQUEST POST</title>
 	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
 </head>
 <style>
-	body{
-		background-color:#C9F5D9;
-		margin: 0px;
+	.logo{
+		background-color: black;
+		height: 15vh;
 	}
-	h1{
-		color:white;
-	}
-	.darken{
-		color:white;
-		font-family:century gothic;
-		font-style:bold;
-	}
-	p{
-		font-family:century gothic;
-		color:white;
-	}
-	.container{
-		display: grid;
-		grid-template-columns: 2fr 8fr;
-		grid-template-rows: 15vh 85vh;
-		grid-gap: 0px;
-		grid-template-areas: "sidebar header" "sidebar content";
-	}
-	.one{
-		grid-area: sidebar;
-	}
-	.two{
-		grid-area: header;
-		display: grid;
-		grid-template-columns: 8.5fr 1.5fr;
-		grid-gap: 0px;
-	}
-	.search_holder{
-			background-color: #A9EED1;
-			text-align: center;
+	.search{
+		background-color: #A9EED1;
+		height: 15vh;
 	}
 	.search_bar{
-			height: 40px;
-			font-size: 30px;
-			width: 80%;
-			border-radius: 10px;
-			border: none;
-			margin-top: 30px;
-	}
-	.search_button{
+		height: 40px;
 		font-size: 30px;
+		width: 80%;
+		border-radius: 10px;
+		border: none;
+		margin-top: 30px;
+		margin-left: 7vw;
 	}
 	.logout_holder{
 			background-color: #A9EED1;
+			margin-left: 6vw;
+	}
+	.instruction_holder{
+			background-color: #A9EED1;
 	}
 	.logout{
-			margin: 30px 30px;
+			margin:30px;
 			background-color: #800000;
 			border: none;
 			color: white;
 			border-radius: 10px;
 			font-size: 35px;
 	}
-	#logo{
-			font-size: 50px;
-			text-align: center;
-		}
-
-	.three{
-		background-color: red;
-		grid-area: sidebar;
-
-		/* grid */
-		display: grid;
-		grid-template-rows: 15% 25% 10% 25% 25%;
-	}
-	.logo_holder{
-			background-color: black;
-		}
-		.prof_pic_holder{
-			background-color: #8FDDDF;
-		}
-	
-		.username_holder{
-			background-color: #8FDDDF;
-		}
-		.username{
-			margin-top: -5px;
-			font-size: 35px;
-			text-align: center;
-		}
-		.extra_space{
-			background-color: #8FDDDF;
-		}
-		.post_holder{
-			background-color: #8FDDDF;
-			text-align: center;
-		}
-		.post_button{
-			margin-left: 10px;
-			margin-top: 10px;
-			height: 100px;
-			width: 100px;
+	.instruction{
+			margin:30px;
 			background-color: white;
-			border-radius: 50%;
-			text-align: center;
-		}
-		.fa-pen-bigger{
-			font-size: 60px;
-			/*manual vertical center*/
-			margin-top: 15%;
-		}
-		.accpage{
-			display: grid;
-			grid-template-rows: 7fr 3fr;
-			text-align: center;
-		}
-
-	.four{
-		grid-area: content;
-		display: grid;
-		grid-template-rows: 1fr 9fr;
-
+			border: none;
+			color: #800000;
+			border-radius: 10px;
+			font-size: 35px;
 	}
-	.four > div{
-		padding: 5px;
-
+	.account{
+		background-color: #8FDDDF;
+		height: 85vh;
 	}
-	.allpost{
-		overflow-y: auto;
+	.user_holder{
+		text-align: center;
+		margin-top: 1vh;
+		margin-bottom: 1vh;
+		font-size: 8vh;
+	}
+	.username{
+		text-align: center;
+	}
+	.userpost{
+		margin-top: 30vh;
+		text-align: center;
+	}
+	.post{
 		background-color: #3CD184;
-		display: grid;
-		grid-template-rows: auto;
+		height: 85vh;
+		overflow-y: auto;
+	}
+	.post_item{
+		margin-top: 0%;
+		margin-left: 3%;
+		margin-right: 3%;
+		margin-bottom: 5%;
+		padding: 5%;
 	}
 	.article-box{
+		background-color: #1FB25F;
 		border-style: solid;
 		border-color:#3CD184; 
-		margin-bottom: 10px;
-		padding: 5px;
-	}
-	.article-box >p{
-		font-family: calibri;	
-		font-size: 15px;
-	}
-	.article-box >h3{
-		color: #820000;
-		font-family: century gothic;
-		font-size: 20px;
-	}
-	.uname{
-		color: yellow;
-	}
-	.postitem{
-		margin-top: 2%;
-		margin-left: 5%;
-		margin-right: 5%;
 		margin-bottom: 5%;
-		background-color: #1FB25F;
+		padding: 3%;
 	}
 </style>
-<body>
-	<div class="container">
-		<div class="one">
-			
-		</div>
-		<div class="two">
-			<!--SEARCH BAR-->
-			<div class="search_holder">
-				<form action="home.php" method="POST">
-				<input type="text" name="search" placeholder="Search..." class="search_bar">
-				<button type="submit" name="submit-search" style="background-color:#800000; "><i class="fas fa-search" style="font-size:30px;color: white; "></i></button>
-				<!--<button type="submit" class="search_button"><i class="fas fa-search" name="submit-search"></i></button>-->
-				</form>
-			</div>
-			<div class="logout_holder">
-				<a href="logout.php"><button class="logout"><i class="fas fa-sign-out-alt logout_icon"></i></button></a>
-			</div>
-		</div>
 
-		<div class="three">
-			<div class="logo_holder">
-			
-				<h1 id="logo">Skillar</h1>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-2 logo">
+				<br>
+				<h1 style="color: white; text-align: center;">Skillar</h1>
+
+			</div>
+			<div class="col-xs-10 search">
+				<div class="row">
+					<div class="col-xs-9">
+						<form action="home.php" method="POST">
+						<input type="text" name="search" placeholder="Search..." class="search_bar">
+						<button type="submit" name="submit-search" style="background-color:#800000; "><i class="fas fa-search" style="font-size:30px;color: white; "></i></button>
+						</form>
+					</div>
+					<div class="col-xs-1 logout_holder">
+						<a href="instructions.php"><i class="fas fa-question-circle instruction"></i></a>
+					</div>
+					<div class="col-xs-1 instruction_holder">
+						<a href="logout.php"><button class="logout"><i class="fas fa-sign-out-alt logout_icon"></i></button></a>
+					</div>
+					
+				</div>
 				
 			</div>
-			<div class="prof_pic_holder">
-				<h1 style="text-align: center; font-size: 4vh;">Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
+
+		</div>
+		<div class="row">
+			<div class="col-xs-2 account">
+				<h1 style="text-align: center; font-size: 3vh;">Welcome <?php echo "@" . $_SESSION['username']; ?> !</h1>
+				<div class="user_holder">
+					<i class="fas fa-user" style="text-align: center;color: white"></i>
+				</div>
 				<form class="ff"  method="post">
-			<div class="accpage">
-					<div>
-					<i class="fas fa-user" style="text-align: center; font-size:5vh;color: white"></i>
-					</div>
-					<div>
+				<div style="text-align: center;">
 					<input type="submit" value="Profile" name="sub1">
-					</div>
-			</div>
-			<?php
-				if(isset($_POST["sub1"])){
-				header("location:accountpage.php");
-				}
-			?>
-			</form>
-			</div>
-			<div class="username_holder">
-				<!--<h2 class="username">@username</h2>-->
+					<?php
+						if(isset($_POST["sub1"])){
+						header("location:accountpage.php");
+						}
+						?>
+				</div>
+				</form>		
 				<h1 class="username"> <?php echo $name ?> </h1>
-			</div>
-			<div class="extra_space"></div>
-			<div class="post_holder">
-				<!--<div class="post_button"><i class="fas fa-pen fa-pen-bigger"></i></div>-->
 				<!--POST BUTTON-->
+				<div class="userpost">
 				<a class="darken" href="user_post.php"><button><i class="fas fa-pen" style="font-size: 30px;"></i></button></a>
 
 				<br><br>
 				<!--INSTRUCIONS-->
-				<a href="instructions.php">How to use</a>
-
+				
+				</div>
 			</div>
-		</div>
-		<div class="four">
-			<div style="text-align: center;" class="postdiv">
-			<h1 style="color: black;"><i class="fas fa-globe" style="margin-right: 2px; "></i>Public Feed</h1>
-			</div>
-			<div class="allpost">
-				<div class="postitem">
-			<?php
+			<div class="col-xs-10 post">
+				<div class="post_item">
+					<?php
 
 	/*
 	$con = mysqli_connect('localhost','root','');
@@ -275,15 +191,32 @@ if(!isset($_SESSION['username'])){
 			if($queryResult > 0){
 				while($row = mysqli_fetch_assoc($res)){
 					echo "<div class='article-box'>
-					<h3>Name: ".$row["Name"]."</h3>
-					<p>Username: ".$row["Username"]."</p>
-					<p>Job Title: ".$row["JTitle"]."</p>
-					<p>Description: ".$row["JDescription"]."</p>
-					<p>Rate: ".$row["Income"]."</p>
-					<p>Method of Payment: ".$row["PMethod"]."</p>
-					<p>Contact No.: ".$row["CNumber"]."</p>
-					<p>Social Media: ".$row["SMedia"]."</p>
-					<p>Date: ".$row["Date"]."</p>
+					<h3>".$row["Name"]."</h3>
+					<p>@".$row["Username"]."</p>
+					<div class='row'>
+					<div class='col-xs-5'>
+					<p><b>Job Title:</b> ".$row["JTitle"]."</p>
+					</div>
+					<div class='col-xs-5'>
+					<p><b>Income:</b> ".$row["Income"]."(".$row["PMethod"].")</p>
+					</div>
+					</div>
+					<br>
+					<p><b>Description: </b> ".$row["JDescription"]."</p>
+					
+					<br>
+					<p><b>Contact me at:</b></p>
+					<div class='row'>
+					<div class='col-xs-5'>
+					<p>".$row["CNumber"]."</p>
+					</div>
+					<div class='col-xs-5'>
+					<p>".$row["SMedia"]."</p>
+					</div>
+					</div>
+					<br>
+					<p>".$row["Date"]."</p>
+					<br>
 					</div>";
 				}
 			} else {
@@ -297,15 +230,31 @@ if(!isset($_SESSION['username'])){
 			if($queryResults > 0){
 				while ($row = mysqli_fetch_assoc($res)) {
 					echo "<div class='article-box'>
-					<h3>Name: ".$row["Name"]."</h3>
-					<p>Username: ".$row["Username"]."</p>
-					<p>Job Title: ".$row["JTitle"]."</p>
-					<p>Description: ".$row["JDescription"]."</p>
-					<p>Income: ".$row["Income"]."</p>
-					<p>Method of Payment: ".$row["PMethod"]."</p>
-					<p>Contact No.: ".$row["CNumber"]."</p>
-					<p>Social Media: ".$row["SMedia"]."</p>
-					<p>Date: ".$row["Date"]."</p>
+					<h3>".$row["Name"]."</h3>
+					<p>@".$row["Username"]."</p>
+					<div class='row'>
+					<div class='col-xs-5'>
+					<p><b>Job Title:</b> ".$row["JTitle"]."</p>
+					</div>
+					<div class='col-xs-5'>
+					<p><b>Income:</b> ".$row["Income"]."(".$row["PMethod"].")</p>
+					</div>
+					</div>
+					<br>
+					<p><b>Description: </b> ".$row["JDescription"]."</p>
+					
+					<br>
+					<p><b>Contact me at:</b></p>
+					<div class='row'>
+					<div class='col-xs-5'>
+					<p>".$row["CNumber"]."</p>
+					</div>
+					<div class='col-xs-5'>
+					<p>".$row["SMedia"]."</p>
+					</div>
+					</div>
+					<br>
+					<p>".$row["Date"]."</p>
 					<br>
 					</div>";
 				}
@@ -313,12 +262,13 @@ if(!isset($_SESSION['username'])){
 		}
 
 	?>
+					
+				</div>
+			</div>
+
 
 		</div>
+		
 	</div>
-
-	</div>
-</div>
-
 </body>
 </html>
