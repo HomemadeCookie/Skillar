@@ -28,42 +28,38 @@
 		input{
 			border-radius: 10px;
 		}
-		.banner{
-				background-color: #F4F9F9;
-				padding-top: 2%;
-				padding-bottom: 3%;
-				
-		}
-		.active{
-			background-color: #a9f1df;
-			border-radius: 10px;
-
-		}
-		.content{
+		.header{
+			margin-top: 1%;
+			border-radius: 5px;
 			width: 90%;
-			border-radius: 10px;
-			
+			background-color: #ffeebf;
 		}
-		.inactive{
-			background-color: #F4F9F9;
+		.banner{
+				display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
 		}
 		.back{
-			
-			text-align: left;
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
+		}
+		.userdata{
+			background-color:#d1fff4;
+			width: 90%;
+			border-radius: 5px;
+			padding-left: 2%;
+			padding-top: 2%;
+			padding-bottom: 2%;
 		}
 
 		i{
 			font-size: 300%;
 			margin-top: 10%;
 					}
-		.userdata{
-			border:5px solid #F4F9F9;
-			margin-top: 7%;
-			width: 95%;
-			border-radius: 5px;
-			padding-left: 2%;
-			padding-top: 2%;
-		}
+		
 		h1{
 			font-family: 'Ubuntu', sans-serif;
 		}
@@ -84,12 +80,22 @@
 
 </head>
 <body>
+	<div class="row header center-block">		
+<div class="back col-xs-1">
+	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
+</div>
+<div class="col-xs-10 center-block text-center banner">
 	<h1>Terms of service</h1>
+</div>
+</div>
+<br>
+<div class="userdata center-block">	
 	<h2>By creating an account, you agree to the following:</h2>
 	<p>
 		Skillar is only responsible for the facilitation of the information regarding the price of the project and the platform to which you can communicate to the author regarding further issues about the payment. Skillar will not be held liable for any financial disputes/loss that come as a result of a project you pursue as all communications and transactions are held outside our platform<br>
 		Author of posts that violate the PSHS code of conduct will be held liable for respective offenses/sanctions. <br>
 	</p>
-	<a href="signup.php">Go back</a>
+</div>
+
 </body>
 </html>

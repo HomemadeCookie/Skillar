@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 	<title>SIGN UP</title>
 	<style>
-		
 		body{
 			background-color:#F4F9F9;
 		}
@@ -17,9 +16,9 @@
 			position: absolute;
 			width: 90%;
 			background-color: #d8e3e7;
-			height: 83%;
+			height: 95%;
 			left: 5%;
-			margin-top: 3%;
+			margin-top: 1%;
 			border-radius: 1%;
 			background-image: url("https://hips.hearstapps.com/rbk.h-cdn.co/assets/16/31/4000x2667/gallery-1470366429-gettyimages-509581070.jpg?resize=980:*");
 			background-size: cover;
@@ -123,6 +122,13 @@
 			padding: 2%;
 			margin-top: 0;
 		}
+		@media screen and (max-width: 768px) {
+  		.hey2{
+   			width:80%;
+    		right: 10%;
+    		margin-top: 3%;
+ 		 }
+}
 	</style>
 </head>
 <body>
@@ -143,10 +149,9 @@
 
 			<button type="submit">Sign up</button>
 </form>
-			<h6>Important: by signing up for an account, you agree to our <a href="agreement.php">terms of service</a></h6>
 			<h4>____________</h4>
 		<h5>Already Have an Account?</h5>
-		<h6>Log in and join the community and help and get help from fellow scholars!</h6>
+		<h6>Log in ang join the community and help and get help from fellow scholars!</h6>
 		
     <a href="start.php"><button>Log in</button></a>
 

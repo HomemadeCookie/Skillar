@@ -18,9 +18,9 @@
 			position: absolute;
 			width: 90%;
 			background-color: #d8e3e7;
-			height: 83%;
+			height: 95%;
 			left: 5%;
-			margin-top: 3%;
+			margin-top: 1%;
 			border-radius: 1%;
 			background-image: url("https://hips.hearstapps.com/rbk.h-cdn.co/assets/16/31/4000x2667/gallery-1470366429-gettyimages-509581070.jpg?resize=980:*");
 			background-size: cover;
@@ -107,7 +107,6 @@
 			left: 30%;
 			width: 50%;
 			border-radius: 15px;
-
 		}
 		button{
 			border-radius: 15px;
@@ -124,6 +123,15 @@
 			padding: 2%;
 			margin-top: 0;
 		}
+
+		@media screen and (max-width: 768px) {
+  		.hey{
+   			width:80%;
+    		right: 10%;
+    		margin-top: 3%;
+ 		 }
+}
+
 	</style>
 </head>
 <body>
@@ -146,6 +154,8 @@
 </form>
 		
 	</div>
+<!-- auijnkdlcmas-->
+	
 
 <!--
 	<div class="hey2">

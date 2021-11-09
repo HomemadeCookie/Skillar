@@ -1,5 +1,65 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+	<title>Admin Post Validate</title>
+</head>
+<style type="text/css">
+	.header{
+			margin-top: 1%;
+			border-radius: 5px;
+			width: 90%;
+			background-color: #ffeebf;
+		}
+		.banner{
+				display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;		
+		}
+		.back{
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
+		}
+		.userdata{
+			background-color:#d1fff4;
+			width: 90%;
+			border-radius: 5px;
+			padding: 2%;
+		}
+		h1{
+			font-family: 'Ubuntu', sans-serif;
+		}
+		h3{
+			font-family: 'Roboto', sans-serif;
+			text-align: center;
+			font-weight: bold;
+		}
+		body{
+			background-color: #F4F9F9;
+		}
+</style>
+<body>
+	<div class="row header center-block">
+<div class="back col-xs-1 align-middle">
+	<a href="queries.php"><i class="fas fa-arrow-left fa-3x "></i></a>
+</div>
+<div class="col-xs-10 center-block banner">
+	<h1 class="display-1">Post Successfully Uploaded</h1>
+</div>
+</div>
+<br>
+	<div class="userdata center-block">
 <?php
-
 session_start();
 //header('location:admin_post.php');
 
@@ -25,10 +85,6 @@ while($num!=0){
 	$s= "select * from final where ID = '$id'";
 	$result = mysqli_query($con, $s);
 	$num = mysqli_num_rows($result);
-	//echo ". num is ";
-	echo $num;
-	//echo "- id=";
-	echo $id;
 }
 
 /*
@@ -41,46 +97,10 @@ $del = "DELETE FROM uploads WHERE Job_Title='$three' AND Job_description='$four'
 
  mysqli_query($con,$reg);
  mysqli_query($con,$del);
-// echo "Upload Successful";
+ echo "<h3>Upload Successful</h3>";
 
-// echo "<a href='queries.php'>Go Back</a>"
+ 
 
-?>
-<html>
-<head>
-	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-	<style>
-		h1{
-			font-family: Calibri;
-			font-size: 35px;
-			color: #800000;
-		}
-		h2{
-			font-family: century gothic;
-			font-size: 25px;
-			color: black;
-		}
-		body{
-			color: white;
-		}
-		.content{
-			background-color: #1FB25F;
-			height: 300px;
-			width: 40%;
-			border-radius: 10px;
-			padding: 10px;
-		}
-	</style>
-</head>
-<body>
-	<div class="container-fluid">
-		<div class="content">
-			<h1>Post Successful</h1>
-			<h2>Selected post will now appear on public feed.</h2>
-			<br><br><br>
-			<a href="queries.php"><button><i class="fas fa-arrow-left" style="font-size: 20px;"></i></button></a>
-		</div>
-	</div>
+?></div>
 </body>
 </html>

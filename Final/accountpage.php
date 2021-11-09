@@ -30,11 +30,10 @@
 		}
 		
 		.banner{
-				
-				padding-top: 2%;
-				padding-bottom: 3%;
-				text-align: center;
-				
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
 		}
 		.active{
 			background-color: #a9f1df;
@@ -43,19 +42,19 @@
 		}
 		.content{
 			width: 90%;
-			
 			border-radius: 5px;
 			background-color: #a9f1df;
 			
 		}
 		.inactive{
-			
 			padding-top: 0.5%;
 			padding-bottom: 1%;
 		}
 		.back{
-			margin-top: 3%;
-			text-align: center;
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
 		}
 
 		i{
@@ -74,13 +73,12 @@
 		}
 		h1{
 			font-family: 'Ubuntu', sans-serif;
-			font-size: 280%;
 			font-weight: bold;
 		}
 		h2{
 			font-family: 'Bebas Neue', cursive;
 			font-weight: bolder;
-			font-size: 250%;
+			
 		}
 		p{
 			font-family: 'Roboto', sans-serif;
@@ -90,7 +88,7 @@
 			font-family: 'Bebas Neue', cursive;
 			font-size: 15px;
 			padding: 0;
-			width: 7%;
+			width: 100px;
 		}
 		.header{
 			margin-top: 1%;
@@ -116,7 +114,7 @@
 <div class="back col-xs-1">
 	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
 </div>
-<div class="col-xs-11 center-block banner">
+<div class="col-xs-10 center-block banner align-middle">
 	<h1>ACCOUNT PAGE</h1>
 </div>
 </div>

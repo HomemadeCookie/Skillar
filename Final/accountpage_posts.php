@@ -27,20 +27,23 @@
 			background-color:#F4F9F9;	
 		}
 		.back{
-			margin-top: 3%;
-			text-align: center;
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
 		}
 		.button{
 			border-radius: 15px;
 			font-family: 'Bebas Neue', cursive;
 			font-size: 15px;
 			padding: 0;
-			width: 7%;
+			width: 100px;
 		}
 		.banner{
-				padding-top: 2%;
-				padding-bottom: 3%;
-				text-align: center;
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
 		}
 		.active{
 			background-color: #a9f1df;
@@ -80,7 +83,7 @@
 		h2{
 			font-family: 'Bebas Neue', cursive;
 			font-weight: bolder;
-			font-size: 250%;
+			
 		}
 		p{
 			font-family: 'Roboto', sans-serif;
@@ -97,7 +100,6 @@
 		}
 		h1{
 			font-family: 'Ubuntu', sans-serif;
-			font-size: 280%;
 			font-weight: bold;
 		}
 		.navbar{
@@ -108,12 +110,11 @@
 
 </head>
 <body>
-	<div class="row header center-block">
-		
+	<div class="row header center-block">		
 <div class="back col-xs-1">
 	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
 </div>
-<div class="col-xs-11 center-block text-center banner">
+<div class="col-xs-10 center-block text-center banner">
 	<h1>ACCOUNT PAGE</h1>
 </div>
 </div>
@@ -178,5 +179,6 @@
 
 	<br><br>
 </div>
+
 </body>
 </html>

@@ -28,42 +28,43 @@
 		input{
 			border-radius: 10px;
 		}
+		.header{
+			margin-top: 1%;
+			border-radius: 5px;
+			width: 90%;
+			background-color: #ffeebf;
+		}
 		.banner{
-				background-color: #F4F9F9;
-				padding-top: 2%;
-				padding-bottom: 3%;
-				
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;		
 		}
-		.active{
-			background-color: #a9f1df;
-			border-radius: 10px;
-
+		.back{
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
 		}
+		.userdata{
+			background-color:#d1fff4;
+			width: 90%;
+			border-radius: 5px;
+			padding-left: 2%;
+			padding-top: 2%;
+			padding-bottom: 2%;
+		}
+		
 		.content{
 			width: 90%;
 			border-radius: 10px;
 			
-		}
-		.inactive{
-			background-color: #F4F9F9;
-		}
-		.back{
-			
-			text-align: left;
 		}
 
 		i{
 			font-size: 300%;
 			margin-top: 10%;
 					}
-		.userdata{
-			border:5px solid #F4F9F9;
-			margin-top: 7%;
-			width: 95%;
-			border-radius: 5px;
-			padding-left: 2%;
-			padding-top: 2%;
-		}
 		h1{
 			font-family: 'Ubuntu', sans-serif;
 		}
@@ -84,7 +85,16 @@
 
 </head>
 <body>
+	<div class="row header center-block">		
+<div class="back col-xs-1">
+	<a href="home.php"><i class="fas fa-arrow-left"></i></a>
+</div>
+<div class="col-xs-10 center-block text-center banner">
 	<h1>Instructions page</h1>
+</div>
+</div>
+<br>
+	<div class="userdata center-block">
 	<h2>How to use the website</h2>
 	<p>
 		Scroll through feed to see available projects<br>
@@ -100,7 +110,6 @@
 		You can also see all your posts in your account page<br>
 		If one of your posts are already done/taken, you can remove it from the public feed by simply clicking the checkbox in the post at your account page.
 	</p>
-
-	<a href="home.php">Go back</a>
+</div>
 </body>
 </html>
