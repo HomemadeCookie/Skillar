@@ -45,36 +45,66 @@ $reg = "INSERT INTO `uploads` (`Name`, `Username`, `Job_title`, `Job_description
 ?>
 <html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
 	<style>
+		.header{
+			margin-top: 1%;
+			border-radius: 5px;
+			width: 90%;
+			background-color: #ffeebf;
+		}
+		.banner{
+			padding-top: 2%;
+			padding-bottom: 3%;
+			text-align: center;	
+				
+		}
+		.back{
+			display: flex;
+ 			justify-content: center;
+  			align-items: center;
+			height: 20%;
+		}
+		.userdata{
+			background-color:#d1fff4;
+			width: 90%;
+			border-radius: 5px;
+			padding-left: 2%;
+			padding-top: 2%;
+			padding-bottom: 2%;
+		}
+		
 		h1{
-			font-family: Calibri;
-			font-size: 35px;
-			color: #800000;
+			font-family: 'Ubuntu', sans-serif;
+			margin-right: 5%;
+			font-weight: bold;
 		}
 		h2{
-			font-family: century gothic;
-			font-size: 25px;
-			color: black;
-		}
-		.content{
-			background-color: #1FB25F;
-			height: 300px;
-			width: 40%;
-			border-radius: 10px;
-			padding: 10px;
+			font-family: 'Roboto', sans-serif;
 		}
 	</style>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="content">
-			<h1>Post Request Sent Successfully</h1>
-			<h2>Processing will take somewhere around 1-3 days.</h2>
-			<br><br><br>
-			<a href="user_post.php"><button><i class="fas fa-arrow-left" style="font-size: 20px;"></i></button></a>
-		</div>
-	</div>
+	<div class="row header center-block">
+<div class="back col-xs-1">
+	<a href="home.php"><i class="fas fa-arrow-left fa-3x "></i></a>
+</div>
+<div class="col-xs-11 center-block banner">
+	<h1 class="display-1">Post Request Sent Succesfully!</h1>
+</div>
+</div>
+<br>
+<div class="userdata center-block text-center">
+	<h2>Processing will take somewhere around 1-3 days.</h2>
+</div>
 </body>
 </html>
