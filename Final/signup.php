@@ -149,6 +149,7 @@
 
 			<button type="submit">Sign up</button>
 </form>
+<h6>Important: by signing up for an account, you agree to our <a href="agreement.php">terms of service</a></h6>
 			<h4>____________</h4>
 		<h5>Already Have an Account?</h5>
 		<h6>Log in ang join the community and help and get help from fellow scholars!</h6>
