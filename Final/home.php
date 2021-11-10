@@ -24,16 +24,19 @@ if(!isset($_SESSION['username'])){
 <html>
 <head>
 	<title>Home page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-	<title>REQUEST POST</title>
-	<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+		<script src="https://kit.fontawesome.com/766528b8cf.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Heebo&display=swap" rel="stylesheet">
 </head>
 <style>
 	.logo{
@@ -47,26 +50,32 @@ if(!isset($_SESSION['username'])){
 	.search_bar{
 		height: 40px;
 		font-size: 30px;
-		width: 80%;
+		width: 70%;
 		border-radius: 10px;
 		border: none;
-		margin-top: 30px;
-		margin-left: 7vw;
-	}
-	.logout_holder{
-			background-color: #ffeebf;
-			margin-left: 6vw;
+		margin-top: 3.3vh;
+		margin-left: 3vh;
+
 	}
 	.instruction_holder{
 			background-color: #ffeebf;
+			text-align: right;
+	}
+	.logout_holder{
+			background-color: #ffeebf;
+			margin-left: 0vw;
 	}
 	.logout{
 			margin:30px;
 			background-color: #800000;
 			border: none;
-			color: white;
-			border-radius: 10px;
+			color: #ffeebf;
+			border-radius: 30%;
 			font-size: 35px;
+	}
+	.logout:hover{
+			color: white;
+
 	}
 	.instruction{
 			margin:30px;
@@ -75,6 +84,9 @@ if(!isset($_SESSION['username'])){
 			color: #800000;
 			border-radius: 10px;
 			font-size: 35px;
+	}
+	.side-btn{
+		font-size: 25px;
 	}
 	.account{
 		background-color: #8FDDDF;
@@ -86,8 +98,17 @@ if(!isset($_SESSION['username'])){
 		margin-bottom: 1vh;
 		font-size: 8vh;
 	}
+	.prof_btn{
+		text-decoration-style: none;
+		font-family: 'Red Hat Mono', monospace; 
+		color: white;
+	}
+	.prof_btn >a:hover{
+		text-decoration-style: none;
+	}
 	.username{
 		text-align: center;
+		font-family: 'Fira Sans', sans-serif;
 	}
 	.userpost{
 		margin-top: 30vh;
@@ -110,6 +131,101 @@ if(!isset($_SESSION['username'])){
 		margin-bottom: 5%;
 		padding: 3%;
 	}
+	.article-box >h3{
+		font-family: 'Heebo', sans-serif;
+	}
+	@media screen and (max-width: 1024px) {
+    .account {
+        display: none !important;
+   	 }
+	}
+	@media screen and (max-width: 1024px) {
+    .logo {
+        display: none !important;
+   	 }
+	}
+	@media screen and (max-width: 1024px) {
+    .search {
+        width: 100%;
+   	 }
+	}
+	@media screen and (max-width: 1024px) {
+    .search_bar {
+        margin-left: 5vw;
+   	 }
+	}
+	@media screen and (max-width: 1024px) {
+    .post {
+        width: 100%;
+   	 }
+	}
+	@media screen and (max-width: 1024px) {
+    .logout {
+        display: none;
+   	 }
+	}
+	.sidenav {
+  		height: 100%;
+  		width: 0;
+  		position: fixed;
+  		z-index: 1;
+  		top: 0;
+  		left: 0;
+  		background-color: #111;
+  		overflow-x: hidden;
+  		transition: 0.5s;
+  		padding-top: 60px;
+  		z-index: 100;
+	}
+	.sidenav span{
+		margin-left: 2vw;
+	}
+	.sidenav a {
+ 		padding: 8px 8px 8px 32px;
+ 		text-decoration: none;
+ 		font-size: 25px;
+ 		color: #818181;
+ 		display: block;
+  		transition: 0.3s;
+
+	}
+	.sidenav a:hover {
+ 		color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+ 		position: absolute;
+  		top: 0;
+  		right: 25px;
+  		font-size: 36px;
+  		margin-left: 50px;
+	}
+
+	#main {
+ 		transition: margin-left .5s;
+ 		padding: 16px;
+	}
+
+	@media screen and (max-height: 450px) {
+   	 	.sidenav {padding-top: 15px;}
+  		.sidenav a {font-size: 18px;}
+	}
+	@media screen and (max-width : 1920px){
+ 		.navbut{
+ 		 	visibility: hidden;
+  		}
+  		.sidenav {
+  			visibility: hidden;
+  		}
+	}	
+	@media screen and (max-width : 1024px){
+ 		 .navbut{
+ 		 	visibility: visible;
+  		}
+  		.sidenav{
+  			visibility: visible;
+  		}
+	}	
 </style>
 
 <body>
@@ -118,21 +234,37 @@ if(!isset($_SESSION['username'])){
 			<div class="col-xs-2 logo">
 				<br>
 				<h1 style="color: white; text-align: center; font-family: 'Ubuntu', sans-serif;">Skillar</h1>
-
-			</div>
+				
+				</div>
 			<div class="col-xs-10 search">
 				<div class="row">
-					<div class="col-xs-9">
-						<form action="home.php" method="POST">
-						<input type="text" name="search" placeholder="Search..." class="search_bar">
-						<button type="submit" name="submit-search" style="background-color:#800000; "><i class="fas fa-search" style="font-size:30px;color: white; "></i></button>
-						</form>
+					<div class="col-xs-1">
+							<div id="main" class="navbut">
+  								<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+							</div>
 					</div>
-					<div class="col-xs-1 logout_holder">
-						<a href="instructions.php"><i class="fas fa-question-circle instruction"></i></a>
+					<div class="col-xs-8 search_bar">
+						<div id="mySidenav" class="sidenav">
+  							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  							<a href="accountpage.php"><i class="fas fa-user"></i><span>Profile</span></a>
+  							<a href="user_post.php"><i class="fas fa-pen"></i><span>Post</span></a>
+  							<a href="instructions.php"><i class="fas fa-question"></i><span>Help</span></a>
+  							<a href="logout.php"><i class="fas fa-sign-out-alt"></i><span>Sign Out</span></a>
+						</div>
+						<form action="home.php" method="POST">
+							<div class="input-group">
+      							<input type="text" class="form-control" placeholder="Search" name="search">
+     								 <div class="input-group-btn">
+       								 	<button class="btn btn-default" type="submit" name="submit-search"><i class="glyphicon glyphicon-search" style="font-size: 2.2vh; background-color: "></i></button>
+      								 </div>
+    						</div>
+						</form>						
 					</div>
 					<div class="col-xs-1 instruction_holder">
-						<a href="logout.php"><button class="logout"><i class="fas fa-sign-out-alt logout_icon"></i></button></a>
+						<a href="instructions.php"><button class="logout btn"><i class="fas fa-question-circle side-btn"></i></button></a>
+					</div>
+					<div class="col-xs-1 logout_holder">
+						<a href="logout.php"><button class="logout btn"><i class="fas fa-sign-out-alt side-btn"></i></button></a>
 					</div>
 					
 				</div>
@@ -146,9 +278,13 @@ if(!isset($_SESSION['username'])){
 				<div class="user_holder">
 					<i class="fas fa-user" style="text-align: center;color: white"></i>
 				</div>
+				<div class="prof_btn">
+				<a href="accountpage.php"><button class="btn" style="margin-left: 34%;margin-right: 34%; background-color: white;">Profile</button></a>
+				</div>
+				<!--
 				<form class="ff"  method="post">
 				<div style="text-align: center;">
-					<input type="submit" value="Profile" name="sub1">
+					<input type="submit" value="Profile" name="sub1" class="btn">
 					<?php
 						if(isset($_POST["sub1"])){
 						header("location:accountpage.php");
@@ -156,13 +292,12 @@ if(!isset($_SESSION['username'])){
 						?>
 				</div>
 				</form>		
-				<h1 style="text-align: center; font-size: 2vh;"><?php echo "@" . $_SESSION['username']; ?></h1>
-				<!--POST BUTTON-->
+				-->
+				<h1 style="text-align: center; font-size: 2vh; font-family: 'Heebo', sans-serif;"><?php echo "@" . $_SESSION['username']; ?></h1>
 				<div class="userpost">
-				<a class="darken" href="user_post.php"><button><i class="fas fa-pen" style="font-size: 30px;"></i></button></a>
+				<a class="darken" href="user_post.php"><button style="border-radius: 50%; height: 4vw; width: 4vw;" class="post_btn"><i class="fas fa-pen btn" style="font-size: 30px;"></i></button></a>
 
 				<br><br>
-				<!--INSTRUCIONS-->
 				
 				</div>
 			</div>
@@ -275,5 +410,14 @@ if(!isset($_SESSION['username'])){
 		</div>
 		
 	</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>	
 </body>
 </html>
