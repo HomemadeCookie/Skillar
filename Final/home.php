@@ -110,7 +110,8 @@ if(!isset($_SESSION['username'])){
 	}
 	.username{
 		text-align: center;
-		font-family: 'Fira Sans', sans-serif;
+		font-family: 'Heebo', sans-serif;
+		/*text-shadow: 0 0 3px #E0E0E0, 0 0 5px #F0F0F0;*/
 	}
 	.userpost{
 		margin-top: 30vh;
@@ -284,7 +285,7 @@ if(!isset($_SESSION['username'])){
 		</div>
 		<div class="row">
 			<div class="col-xs-2 account">
-				<h1 class="username"> <?php echo $name ?> </h1>
+				<h1 class="username"><strong> <?php echo $name ?> <strong></h1>
 				<div class="user_holder">
 					<i class="fas fa-user" style="text-align: center;color: white"></i>
 				</div>
@@ -427,6 +428,7 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  console.log("backend optimized");
 }
 </script>	
 </body>
