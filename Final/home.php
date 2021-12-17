@@ -39,6 +39,7 @@ if(!isset($_SESSION['username'])){
 		<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Heebo&display=swap" rel="stylesheet">
 </head>
 <style>
+	/* top nav */
 	.logo{
 		background-color: black;
 		height: 15vh;
@@ -88,6 +89,7 @@ if(!isset($_SESSION['username'])){
 	.side-btn{
 		font-size: 25px;
 	}
+	/* side nav */
 	.account{
 		background-color: #8FDDDF;
 		height: 85vh;
@@ -114,6 +116,7 @@ if(!isset($_SESSION['username'])){
 		margin-top: 30vh;
 		text-align: center;
 	}
+	/*  */
 	.post{
 		background-color: #d1fff4;
 		height: 85vh;
@@ -130,6 +133,7 @@ if(!isset($_SESSION['username'])){
 		background-color: #a9f1df;
 		margin-bottom: 5%;
 		padding: 3%;
+		box-shadow: 8px 8px 5px 3px gray;
 	}
 	.article-box >h3{
 		font-family: 'Heebo', sans-serif;
@@ -147,11 +151,17 @@ if(!isset($_SESSION['username'])){
 	@media screen and (max-width: 1024px) {
     .search {
         width: 100%;
+        height: 10%;
    	 }
 	}
 	@media screen and (max-width: 1024px) {
     .search_bar {
         margin-left: 5vw;
+   	 }
+	}
+	@media screen and (max-width: 1024px) {
+    .search_btn {
+        height: 10%;
    	 }
 	}
 	@media screen and (max-width: 1024px) {
@@ -219,7 +229,7 @@ if(!isset($_SESSION['username'])){
   		}
 	}	
 	@media screen and (max-width : 1024px){
- 		 .navbut{
+ 		.navbut{
  		 	visibility: visible;
   		}
   		.sidenav{
@@ -255,7 +265,7 @@ if(!isset($_SESSION['username'])){
 							<div class="input-group">
       							<input type="text" class="form-control" placeholder="Search" name="search">
      								 <div class="input-group-btn">
-       								 	<button class="btn btn-default" type="submit" name="submit-search"><i class="glyphicon glyphicon-search" style="font-size: 2.2vh; background-color: "></i></button>
+       								 	<button class="btn btn-default search_btn" type="submit" name="submit-search"><i class="glyphicon glyphicon-search" style="font-size: 2.2vh; background-color: "></i></button>
       								 </div>
     						</div>
 						</form>						
@@ -279,7 +289,7 @@ if(!isset($_SESSION['username'])){
 					<i class="fas fa-user" style="text-align: center;color: white"></i>
 				</div>
 				<div class="prof_btn">
-				<a href="accountpage.php"><button class="btn" style="margin-left: 34%;margin-right: 34%; background-color: white;">Profile</button></a>
+					<a href="accountpage.php"><button class="btn" style="margin-left: 34%;margin-right: 34%; background-color: white;">Profile</button></a>
 				</div>
 				<!--
 				<form class="ff"  method="post">
@@ -295,9 +305,9 @@ if(!isset($_SESSION['username'])){
 				-->
 				<h1 style="text-align: center; font-size: 2vh; font-family: 'Heebo', sans-serif;"><?php echo "@" . $_SESSION['username']; ?></h1>
 				<div class="userpost">
-				<a class="darken" href="user_post.php"><button style="border-radius: 50%; height: 4vw; width: 4vw;" class="post_btn"><i class="fas fa-pen btn" style="font-size: 30px;"></i></button></a>
+					<a class="darken" href="user_post.php"><button style="border-radius: 50%; height: 4vw; width: 4vw;" class="post_btn"><i class="fas fa-pen btn" style="font-size: 30px;"></i></button></a>
 
-				<br><br>
+					<br><br>
 				
 				</div>
 			</div>

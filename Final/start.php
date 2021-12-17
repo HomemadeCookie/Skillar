@@ -124,7 +124,7 @@
 			margin-top: 0;
 		}
 
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1024px) {
   		.hey{
    			width:80%;
     		right: 10%;
