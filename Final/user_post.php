@@ -66,11 +66,11 @@
 			<input type="text" name="one" class="form-control" value="<?php echo $_SESSION["name"] ?>" required><br>
 			<label>Username</label>
 			<input type="text" name="two" class="form-control" value="<?php echo $_SESSION["username"] ?>" readonly><br>
-			<label>Job Title</label>
+			<label>Project Title</label>
 			<input type="text" name="three" class="form-control" required><br>
-			<label>Job Description (include duration and date of start)</label>
+			<label>Project Description (include duration and date of start)</label>
 			<input type="text" name="four" class="form-control" required><br>
-			<label>Income (ex. P50/hr or P500 - for project completion)</label>
+			<label>Rate (ex. P50/hr or P500 - for project completion)</label>
 			<input type="text" name="five" class="form-control" required><br>
 			<label>Payment method (gcash, paypal, etc.)</label>
 			<input type="text" name="six" class="form-control" required><br>
